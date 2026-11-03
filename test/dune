@@ -1,0 +1,6 @@
+(library
+ (name hardcaml_persuade_test)
+ (libraries core expect_test_helpers_core expectable hardcaml
+   hardcaml_persuade jane_rope)
+ (preprocess
+  (pps ppx_jane -compare-require-explicit-locality ppx_hardcaml)))
