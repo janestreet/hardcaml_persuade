@@ -1,0 +1,6 @@
+(library
+ (name hardcaml_persuade)
+ (public_name hardcaml_persuade)
+ (libraries core hardcaml)
+ (preprocess
+  (pps ppx_jane -compare-require-explicit-locality ppx_hardcaml)))

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+maintainer: "Jane Street developers"
+authors: ["Jane Street Group, LLC"]
+homepage: "https://github.com/janestreet/hardcaml_persuade"
+bug-reports: "https://github.com/janestreet/hardcaml_persuade/issues"
+dev-repo: "git+https://github.com/janestreet/hardcaml_persuade.git"
+doc: "https://ocaml.janestreet.com/ocaml-core/latest/doc/hardcaml_persuade/index.html"
+license: "MIT"
+x-maintenance-intent: ["(latest)"]
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml" {>= "5.1.0"}
+  "core"
+  "hardcaml"
+  "ppx_hardcaml"
+  "ppx_jane"
+  "dune"         {>= "3.17.0"}
+]
+available: arch != "x86_32"
+synopsis: "Formal property syntax for Hardcaml"
+description: "
+Syntax and lowering utilities for writing Hardcaml formal properties as LTL and SVA.
+"
